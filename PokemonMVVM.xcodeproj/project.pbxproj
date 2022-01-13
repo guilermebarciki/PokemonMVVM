@@ -20,7 +20,19 @@
 		B27600D2278E3B0300221ECA /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27600D1278E3B0300221ECA /* PokemonCell.swift */; };
 		B27600D4278E509600221ECA /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27600D3278E509600221ECA /* ApiResult.swift */; };
 		B27600D6278F77AD00221ECA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27600D5278F77AD00221ECA /* APIService.swift */; };
+		B27600DE278FB60600221ECA /* PokemonMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27600DD278FB60600221ECA /* PokemonMVVMTests.swift */; };
+		B27600E5278FB65100221ECA /* PokemonListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27600E4278FB65100221ECA /* PokemonListViewModelTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B27600DF278FB60600221ECA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2760099278E0B1800221ECA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B27600A0278E0B1800221ECA;
+			remoteInfo = PokemonMVVM;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B27600A1278E0B1800221ECA /* PokemonMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,10 +50,20 @@
 		B27600D1278E3B0300221ECA /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 		B27600D3278E509600221ECA /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
 		B27600D5278F77AD00221ECA /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		B27600DB278FB60600221ECA /* PokemonMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B27600DD278FB60600221ECA /* PokemonMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonMVVMTests.swift; sourceTree = "<group>"; };
+		B27600E4278FB65100221ECA /* PokemonListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B276009E278E0B1800221ECA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B27600D8278FB60600221ECA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				B27600A3278E0B1800221ECA /* PokemonMVVM */,
+				B27600DC278FB60600221ECA /* PokemonMVVMTests */,
 				B27600A2278E0B1800221ECA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				B27600A1278E0B1800221ECA /* PokemonMVVM.app */,
+				B27600DB278FB60600221ECA /* PokemonMVVMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,6 +224,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		B27600DC278FB60600221ECA /* PokemonMVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				B27600DD278FB60600221ECA /* PokemonMVVMTests.swift */,
+				B27600E4278FB65100221ECA /* PokemonListViewModelTests.swift */,
+			);
+			path = PokemonMVVMTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,6 +253,24 @@
 			productReference = B27600A1278E0B1800221ECA /* PokemonMVVM.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B27600DA278FB60600221ECA /* PokemonMVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B27600E1278FB60600221ECA /* Build configuration list for PBXNativeTarget "PokemonMVVMTests" */;
+			buildPhases = (
+				B27600D7278FB60600221ECA /* Sources */,
+				B27600D8278FB60600221ECA /* Frameworks */,
+				B27600D9278FB60600221ECA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B27600E0278FB60600221ECA /* PBXTargetDependency */,
+			);
+			name = PokemonMVVMTests;
+			productName = PokemonMVVMTests;
+			productReference = B27600DB278FB60600221ECA /* PokemonMVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -232,6 +283,10 @@
 				TargetAttributes = {
 					B27600A0278E0B1800221ECA = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					B27600DA278FB60600221ECA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = B27600A0278E0B1800221ECA;
 					};
 				};
 			};
@@ -249,6 +304,7 @@
 			projectRoot = "";
 			targets = (
 				B27600A0278E0B1800221ECA /* PokemonMVVM */,
+				B27600DA278FB60600221ECA /* PokemonMVVMTests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,6 +316,13 @@
 			files = (
 				B27600B1278E0B1A00221ECA /* LaunchScreen.storyboard in Resources */,
 				B27600AE278E0B1A00221ECA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B27600D9278FB60600221ECA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +347,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B27600D7278FB60600221ECA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B27600E5278FB65100221ECA /* PokemonListViewModelTests.swift in Sources */,
+				B27600DE278FB60600221ECA /* PokemonMVVMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B27600E0278FB60600221ECA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B27600A0278E0B1800221ECA /* PokemonMVVM */;
+			targetProxy = B27600DF278FB60600221ECA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B27600AF278E0B1A00221ECA /* LaunchScreen.storyboard */ = {
@@ -468,6 +548,42 @@
 			};
 			name = Release;
 		};
+		B27600E2278FB60600221ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AZA2LHKU7Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilermebarciki.PokemonMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokemonMVVM.app/PokemonMVVM";
+			};
+			name = Debug;
+		};
+		B27600E3278FB60600221ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AZA2LHKU7Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilermebarciki.PokemonMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokemonMVVM.app/PokemonMVVM";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -485,6 +601,15 @@
 			buildConfigurations = (
 				B27600B6278E0B1A00221ECA /* Debug */,
 				B27600B7278E0B1A00221ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B27600E1278FB60600221ECA /* Build configuration list for PBXNativeTarget "PokemonMVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B27600E2278FB60600221ECA /* Debug */,
+				B27600E3278FB60600221ECA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

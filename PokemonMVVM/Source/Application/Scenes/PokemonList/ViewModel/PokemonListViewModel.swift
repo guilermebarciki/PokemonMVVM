@@ -8,11 +8,17 @@
 import Foundation
 
 class PokemonListViewModel: PokemonListViewModelProtocol {
-    
+    //MARK : - Properties
     private var pokemonList: [Pokemon] = []
     private var currentURL = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0" )!
-    private let service = ApiService()
+    
+    //MARK : - Dependencies
+    private let service: ApiServiceProtocol
     weak var delegate: PokemonListViewModelDelegate?
+    
+    init(service: ApiServiceProtocol) {
+        self.service = service
+    }
     
     func loadPokemons() {
         service.loadPokemons(for: currentURL) { result in
@@ -81,7 +87,7 @@ class PokemonListViewModel: PokemonListViewModelProtocol {
 //                pokemon.pokemonImage = apiResult.sprites.other["home"]?.front_default
                 
                 
-                pokemon.pokemonImage = self.getJson(data: data,  pokemon: pokemon)
+//
                 
             }.resume()
         }

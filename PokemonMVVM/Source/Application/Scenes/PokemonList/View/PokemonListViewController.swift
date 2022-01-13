@@ -11,13 +11,16 @@ import UIKit
 final class PokemonListViewController: UIViewController {
     // MARK: - Properties
     
-    private let viewModel = PokemonListViewModel()
+    private let viewModel = PokemonListViewModel(service: ApiService())
     private lazy var pokemonTableView = PokemonListView()
     
     // MARK: - ViewController lifecycle
+    
     override func loadView() { //sobrecarga do método porque a lista ficará na tela
             view = pokemonTableView
     }
+    
+    //MARK: - ViewModel
     
     override func viewDidLoad() {
         super.viewDidLoad()

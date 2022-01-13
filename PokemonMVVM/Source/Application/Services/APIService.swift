@@ -12,7 +12,11 @@ enum ApiError: Error {
     case parsing
 }
 
-class ApiService {
+protocol ApiServiceProtocol {
+    func loadPokemons(for url: URL, completion: @escaping (Result<ApiResult, ApiError>) -> Void)
+}
+
+class ApiService: ApiServiceProtocol {
     func loadPokemons(for url: URL, completion: @escaping (Result<ApiResult, ApiError>) -> Void) {
         URLSession.shared.dataTask(with: url) { data, response, error in
            
