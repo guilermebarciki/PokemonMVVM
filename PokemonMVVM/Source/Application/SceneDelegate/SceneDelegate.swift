@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         let nav1 = UINavigationController()
-        let mainView = ViewController() //ViewController = Name of your controller
+        let mainView = PokemonListViewController() //ViewController = Name of your controller
         nav1.viewControllers = [mainView]
         self.window!.rootViewController = nav1
         self.window?.makeKeyAndVisible()
